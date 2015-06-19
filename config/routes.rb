@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :restaurants
   resources :mcdonalds
   resources :wendys
+  resources :tbell
 
   root 'restaurants#index'
 
