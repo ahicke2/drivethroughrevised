@@ -1,0 +1,2 @@
+module McdonaldsHelper
+end

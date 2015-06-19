@@ -1,0 +1,57 @@
+  <style>
+    #feedback { font-size: 1em; }
+    #selectable .ui-selecting { background: #FECA40; }
+    #selectable .ui-selected { background: #F39814; color: white; }
+    #selectable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+    #selectable li { margin: 3px; padding: 1px; float: left; width: 100px; height: 80px; font-size: 1em; text-align: center; }
+  </style>
+
+  <script>
+  // $(function() {
+  //   $( "#selectable" ).selectable({
+  //     selected: function( event, ui ) {
+  //       console.log(event);
+  //       alert('test');
+  //     }
+  //   });
+  // });
+
+  $(function(){
+    $('.ui-state-default').click(function(){
+      // alert($(this).data('calories') + " " + $(this).data('protein'));
+      $( ".menu-items" ).append( "<li>" + "<h4>" + $(this).data('name') + ": " + "</h4>" + "Calories: " + $(this).data('calories') + " Protein:" + $(this).data('protein') + "g" + " Fats:" + $(this).data('fats') + "g" + " Carbs:" + $(this).data('carbs') + "g" + "</li>");
+    });
+  });
+
+
+</script>
+
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+  $(function() {
+    $( document ).tooltip();
+
+  });
+</script>
+<style>
+  label {
+    display: inline-block;
+    width: 7em;
+  }
+</style>
+
+<h1>McDonald's Dollar Menu</h1>
+
+<ol id="selectable">
+<li class="ui-state-default" data-name= "McDouble" data-calories="380" data-protein="22" data-fats="17" data-carbs="34" title="380 Calories, 22g Protein, 17g Fats, 34g Carbs" class="list-group-item">McDouble</a></li>
+<li class="ui-state-default" data-name= "Double Cheeseburger" data-calories="430" data-protein="24" data-fats="21" data-carbs="35" title="430 Calories, 24g Protein, 21g Fats, 35g Carbs" class="list-group-item">Double Cheeseburger</a>
+<li class="ui-state-default" data-name= "McChicken" data-calories="370" data-protein="14" data-fats="14" data-carbs="40" title="370 Calories, 14g Protein, 17g Fats, 40g Carbs" class="list-group-item">McChicken</a>
+<li class="ui-state-default" data-name= "Chicken McNuggets" data-calories="940" data-protein="44" data-fats="59" data-carbs="59" title="940 Calories, 44g Protein, 59g Fats, 59g Carbs" class="list-group-item">Chicken McNuggets</a>
+<li class="ui-state-default" data-name= "Fruit and Yogurt Parfait" data-calories="150" data-protein="4" data-fats="2" data-carbs="30" title="150 Calories, 4g Protein, 2g Fats, 30g Carbs" class="list-group-item">Fruit and Yogurt Parfait</a>
+<li class="ui-state-default" data-name= "Sweet Tea" data-calories="220" data-protein="1" data-fats="0" data-carbs="54" title="220 Calories, 1g Protein, 0g Fats, 54g Carbs" class="list-group-item">Sweet Tea</a>
+<li class="ui-state-default" data-name= "Vanilla Cone" data-calories="170" data-protein="5" data-fats="4.5" data-carbs="27" title="170 Calories, 5g Protein, 4.5g Fats, 27g Carbs" class="list-group-item">Vanilla Cone</a>
+<li class="ui-state-default" data-name= "Chocolate Chip Cookie" data-calories="160" data-protein="2" data-fats="8" data-carbs="21" title="160 Calories, 2g Protein, 8g Fats, 21g Carbs" class="list-group-item">Chocolate Chip Cookie</a>
+<li class="ui-state-default" data-name= "Oatmeal Raisin Cookie" data-calories="150" data-protein="2" data-fats="6" data-carbs="22" title="150 Calories, 2g Protein, 6g Fats, 22g Carbs" class="list-group-item">Oatmeal Raisin Cookie</a>
+</ol>
+
+

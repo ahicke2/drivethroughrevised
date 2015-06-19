@@ -1,0 +1,2 @@
+module WendysHelper
+end
